@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 - Slide Show com Flex e Transition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+
+        .galeria {
+            width: 700px;
+            height: 400px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .foto {
+            flex: 1;
+            border-radius: 30px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transition: flex 0.5s;
+            cursor: pointer;
+        }
+
+        .foto:hover {
+            flex: 5;
+        }
+
+        .legenda {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .icone {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .titulo {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .foto:hover .titulo {
+            opacity: 1;
+        }
+
+        .foto1 { background-image: url("https://picsum.photos/id/1018/800/600"); }
+        .foto2 { background-image: url("https://picsum.photos/id/1036/800/600"); }
+        .foto3 { background-image: url("https://picsum.photos/id/1043/800/600"); }
+        .foto4 { background-image: url("https://picsum.photos/id/1015/800/600"); }
+        .foto5 { background-image: url("https://picsum.photos/id/1039/800/600"); }
+    </style>
+</head>
+<body>
+    <div class="galeria">
+        <div class="foto foto1">
+            <div class="legenda">
+                <div class="icone"></div>
+                <p class="titulo">Montanhas</p>
+            </div>
+        </div>
+        <div class="foto foto2">
+            <div class="legenda">
+                <div class="icone"></div>
+                <p class="titulo">Inverno</p>
+            </div>
+        </div>
+        <div class="foto foto3">
+            <div class="legenda">
+                <div class="icone"></div>
+                <p class="titulo">Floresta</p>
+            </div>
+        </div>
+        <div class="foto foto4">
+            <div class="legenda">
+                <div class="icone"></div>
+                <p class="titulo">Rio</p>
+            </div>
+        </div>
+        <div class="foto foto5">
+            <div class="legenda">
+                <div class="icone"></div>
+                <p class="titulo">Cachoeira</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
