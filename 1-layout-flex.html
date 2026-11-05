@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 - Layout com Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topo {
+            height: 90px;
+            background-color: #262626;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            gap: 8px;
+        }
+
+        .bolinha {
+            width: 30px;
+            height: 30px;
+            background-color: #00b3a4;
+            border-radius: 50%;
+        }
+
+        .meio {
+            flex: 1;
+            display: flex;
+        }
+
+        .navegacao {
+            width: 120px;
+            background-color: #f58233;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .principal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cabecalho {
+            height: 70px;
+            background-color: #00a6dc;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .conteudo {
+            flex: 1;
+            background-color: #604ba0;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .rodape {
+            height: 70px;
+            background-color: #0592c2;
+            text-align: center;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="topo">
+            <div class="bolinha"></div>
+            <div class="bolinha"></div>
+            <div class="bolinha"></div>
+        </div>
+
+        <div class="meio">
+            <nav class="navegacao">NAVEGAÇÃO</nav>
+
+            <div class="principal">
+                <header class="cabecalho">CABEÇALHO</header>
+                <main class="conteudo">CONTEÚDO</main>
+                <footer class="rodape">RODAPÉ</footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
