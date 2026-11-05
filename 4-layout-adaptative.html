@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 - Layout Adaptativo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 150px 1fr 150px;
+            grid-template-rows: 50px 50px 1fr 50px 50px;
+            gap: 5px;
+            padding: 5px;
+
+            grid-template-areas:
+                "header  header  header"
+                "left    banner  right"
+                "left    main    right"
+                "left    low     right"
+                "footer  footer  footer";
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #eaaf00;
+        }
+
+        .banner {
+            grid-area: banner;
+            background-color: #db4437;
+        }
+
+        .left {
+            grid-area: left;
+            background-color: #0f9d58;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: #4285f4;
+        }
+
+        .right {
+            grid-area: right;
+            background-color: #eaaf00;
+        }
+
+        .low {
+            grid-area: low;
+            background-color: #0f9d58;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #4285f4;
+        }
+
+        .container div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                height: auto;
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px 50px 50px 400px 50px 50px 50px;
+                grid-template-areas:
+                    "header"
+                    "banner"
+                    "left"
+                    "main"
+                    "right"
+                    "low"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="banner">Banner</div>
+        <div class="left">Left Aside</div>
+        <div class="main">Main Content</div>
+        <div class="right">Right Aside</div>
+        <div class="low">Low Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
